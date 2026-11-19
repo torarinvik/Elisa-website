@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "module": "site",
+  "target": "wasm32-unknown-unknown",
+  "memory_initial_pages": 16,
+  "memory_max_pages": 32768,
+  "memory": {
+    "import_module": "env",
+    "import_name": "memory",
+    "heap_base_export": "__heap_base"
+  },
+  "exports": [
+    {
+      "name": "add_wasm",
+      "target": "add",
+      "parameters": [
+        {
+          "name": "a",
+          "type": "i32",
+          "default": null,
+          "binding": "scalar",
+          "wasm_type": "i32"
+        },
+        {
+          "name": "b",
+          "type": "i32",
+          "default": null,
+          "binding": "scalar",
+          "wasm_type": "i32"
+        }
+      ],
+      "return": "i32",
+      "binding": "scalar",
+      "wasm_type": "i32",
+      "line": 4
+    },
+    {
+      "name": "agent_title",
+      "target": "title",
+      "parameters": [],
+      "return": "cstr",
+      "binding": "string",
+      "wasm_type": "i32",
+      "line": 9
+    },
+    {
+      "name": "detail",
+      "target": "architecture_detail",
+      "parameters": [
+        {
+          "name": "section",
+          "type": "i32",
+          "default": null,
+          "binding": "scalar",
+          "wasm_type": "i32"
+        }
+      ],
+      "return": "cstr",
+      "binding": "string",
+      "wasm_type": "i32",
+      "line": 18
+    }
+  ],
+  "files": {
+    "wasm": "site.wasm",
+    "loader": "site.mjs",
+    "types": "site.d.ts",
+    "types_esm": "site.d.mts"
+  },
+  "generated_by": "elisa -emit wasm",
+  "runtime": {
+    "mode": "linked",
+    "allocator": "host-free-list"
+  }
+}

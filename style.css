@@ -1,0 +1,129 @@
+* { box-sizing: border-box }
+html { background: #0b1424; color: #f3f6fc; font: 16px/1.5 Inter, system-ui, sans-serif; color-scheme: dark }
+body { margin: 0; min-height: 100vh; background: linear-gradient(130deg,#101a2de0,#101d33b8),url('assets/starfield.webp') center / cover fixed }
+a { color: inherit }
+aside { width: 14vw; min-height: 100vh; position: fixed; border-right: 1px solid #9cb6cd66; background: #06102099; padding: 2vw 1vw; display: flex; align-items: center; flex-direction: column; gap: 7vh }
+aside img { width: 100% }
+main { margin-left: 14vw; padding: 0 2vw 5vh }
+.hero,.language-grid { display: grid; grid-template-columns: .91fr 1.09fr; align-items: center; min-height: 78vh; gap: 2vw }
+h1 { font-size: clamp(2.6rem,4.65vw,6rem); line-height: .99; letter-spacing: -.055em; margin: 0 }
+h2 { letter-spacing: -.04em }
+.hero p,.language-grid section>p { font-size: clamp(1.15rem,1.8vw,2rem); line-height: 1.35; max-width: 36ch }
+.desktop { width: 100%; mask-image: linear-gradient(to right,transparent,#000 6%,#000 94%,transparent),linear-gradient(to bottom,transparent,#000 12%,#000 88%,transparent); mask-composite: intersect }
+.elisa-liquid { display: inline-block; text-decoration: none; font: inherit; padding: .65em 1.1em; cursor: pointer; --liquid-top: #596b8099; --liquid-bottom: #071423aa; box-shadow: inset 0 1px 1px #d4edff99,0 5px 9px #0007 }
+.cards,.choices,form,header,.language nav { display: flex; align-items: center; gap: 1rem }
+.cards { border-top: 1px solid #9cb6cd88; padding-top: 1.6rem }
+.cards a { flex: 1; padding: 1.25em; font-size: clamp(1.2rem,1.7vw,2rem) }
+#architecture { margin: 12vh 0 0; padding: 2rem 0; max-width: 76rem }
+.choices button,input { font: inherit; border: 1px solid #9cb6cd88; border-radius: .45rem; padding: .45rem .75rem; background: #12213b; color: inherit }
+.choices button { cursor: pointer }
+.choices [aria-pressed=true] { background: #2d4769 }
+.language main { margin: 0 auto; max-width: 100rem; padding: 2rem 4vw }
+.language nav,header { justify-content: space-between }
+.language h1 img { width: min(90%,24rem) }
+.elisa-frame { padding: 1.5rem; min-width: 0 }
+header h2 { margin: 0 }
+pre { overflow: auto; padding: 1rem 0; color: #cfe7ff }
+pre b { color: #ccb2ff }
+form { flex-wrap: wrap }
+input { width: 6rem }
+output { font-family: monospace }
+@media(max-width:760px) {
+ aside { position: static; width: 100%; min-height: 0; flex-direction: row; justify-content: space-between; padding: .6rem 5vw; border: 0 }
+ aside img { width: 6rem }
+ main { margin: 0; padding: 0 5vw 2rem }
+ .hero,.language-grid { grid-template-columns: 1fr; padding: 3rem 0 1rem; gap: 1rem }
+ .cards { flex-wrap: wrap }
+ .cards a { min-width: 12rem }
+}
+.nav-icon, .github-mark { vertical-align: middle; margin-right: .25em }
+
+#architecture h2 {
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 1.05;
+  margin: 0 0 1.5rem;
+}
+
+#architecture h3 {
+  margin: 3.25rem 0 1rem;
+  font-size: clamp(1.4rem, 2vw, 1.9rem);
+}
+
+#architecture p, #architecture dd {
+  max-width: 68ch;
+  color: #d6e2f3;
+  line-height: 1.7;
+}
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 23rem), 1fr));
+  gap: 1rem;
+  margin: 0;
+}
+
+.principles dt {
+  font-size: 1.15rem;
+  font-weight: 650;
+}
+
+.principles dd { margin: .5rem 0 0 }
+
+.architecture-feature, .architecture-status {
+  margin-top: 1rem;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+
+.architecture-feature, .architecture-status, .principles > .elisa-frame {
+  background: linear-gradient(125deg, #152f4ce8, #0a172be8);
+  border-left: 3px solid #7bb8dc;
+}
+
+#architecture .architecture-feature h3 { margin-top: 0 }
+#architecture .architecture-status h3 { margin-top: 0 }
+.architecture-feature p:last-child, .architecture-status p:last-child { margin-bottom: 0 }
+
+.sidebar-links { display: grid; gap: .75rem; width: 100%; text-align: center }
+
+.sidebar-links .elisa-liquid {
+  color: #f1f7ff;
+  font-weight: 650;
+}
+
+@media (forced-colors: none) {
+  .sidebar-links .elisa-liquid {
+    text-shadow: 0 1px #58779e, 0 2px #243e60, 0 4px 8px #020713a6;
+  }
+}
+.workshop-intro { max-width: 70ch; margin: clamp(3rem, 8vw, 7rem) 0 3rem }
+.workshop-intro p { max-width: 62ch }
+.workshop-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: 1.5rem }
+.workshop-gallery figure { margin: 0 }
+.workshop-gallery img { display: block; width: 100%; height: auto; border: 1px solid #9cb6cd88; border-radius: .8rem }
+.workshop-gallery figcaption { padding-top: .5rem; color: #d6e2f3 }
+@media (max-width: 760px) {
+  .sidebar-links { width: auto }
+}
+
+.agent-home h1,
+.agent-home #architecture h2 {
+  color: #f1f7ff;
+  text-shadow:
+    0 1px #9cb6d6,
+    0 2px #536f95,
+    0 3px #294466,
+    0 6px 14px #020713b3;
+}
+
+.agent-home #architecture h3,
+.agent-home .principles dt {
+  color: #eaf4ff;
+  text-shadow: 0 1px #405c80, 0 3px 8px #020713a6;
+}
+
+@media (forced-colors: active) {
+  .agent-home h1,
+  .agent-home #architecture :is(h2, h3, dt) {
+    text-shadow: none;
+  }
+}

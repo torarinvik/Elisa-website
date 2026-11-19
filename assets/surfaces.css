@@ -1,0 +1,66 @@
+.elisa-background {
+  background: #030a1e url("./starfield.webp") center top / cover no-repeat;
+  color: #f2f7ff;
+}
+
+.elisa-frame {
+  border: 1px solid #a2c7ff61;
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #142d59d9, #06152bd9);
+  box-shadow: inset 0 1px #deedff12;
+}
+
+.elisa-liquid {
+  --liquid-image: url("./liquid-cyan.webp");
+  --liquid-top: #bfdfff00;
+  --liquid-bottom: #02091d18;
+  --liquid-border: #8bc6f680;
+
+  border: 1px solid var(--liquid-border);
+  border-radius: 0.8rem;
+  background:
+    linear-gradient(150deg, var(--liquid-top), var(--liquid-bottom)),
+    var(--liquid-image) center / cover no-repeat,
+    #071834;
+  color: #f7faff;
+  box-shadow: inset 0 1px #d9ecff24;
+  transition: border-color 140ms ease, box-shadow 140ms ease, transform 140ms ease;
+}
+
+.elisa-liquid--violet {
+  --liquid-image: url("./liquid-violet.webp");
+}
+
+.elisa-liquid--cobalt {
+  --liquid-image: url("./liquid-cobalt.webp");
+}
+
+.elisa-liquid:is(:hover, :focus-visible, .is-highlighted) {
+  --liquid-top: #b8dcff2b;
+  --liquid-bottom: #407ec51a;
+  --liquid-border: #c4e5ffd1;
+  box-shadow: inset 0 1px #eef8ff55, 0 0 0.7rem #69adff33;
+}
+
+.elisa-liquid:focus-visible {
+  outline: 2px solid #d3eaff;
+  outline-offset: 3px;
+}
+
+.elisa-liquid:is(:active, .is-pressed) {
+  --liquid-top: #02071866;
+  --liquid-bottom: #02071830;
+  --liquid-border: #96bced99;
+  box-shadow: inset 0 2px 5px #010512ad;
+  transform: translateY(1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .elisa-liquid {
+    transition: none;
+  }
+
+  .elisa-liquid:is(:active, .is-pressed) {
+    transform: none;
+  }
+}

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Elisa Neural Computer Agent</title><link rel="stylesheet" href="assets/surfaces.css"><link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script></head>
+<body class="agent-home"><aside><img src="assets/elisa-logo.webp" alt="Elisa Neural Computer Agent"><nav class="sidebar-links" aria-label="Projects"><a class="elisa-liquid" href="language/">Elisa language →</a><a class="elisa-liquid elisa-liquid--cobalt" href="workshop/">Neural Workshop Enhanced →</a></nav></aside>
+<main><section class="hero"><div><h1>Elisa Neural<br>Computer Agent</h1><p>An experimental agent that learns through a growing library of small experts.</p></div><img class="desktop" src="assets/desktop.webp" alt="An illustrated desktop with a cursor moving a file manager window"></section>
+<nav class="cards"><a class="elisa-liquid" href="#architecture">Architecture ↗</a><a class="elisa-liquid elisa-liquid--cobalt" href="https://github.com/torarinvik/elisa-agent"><img class="github-mark" src="assets/github.svg" width="20" height="20" alt=""> Source on GitHub ↗</a></nav>
+<section id="architecture"><h2>Core Idea</h2>
+<p>Most frontier AI models are giant monolithic models. Models consisting of trillions of parameters are not uncommon. The unfortunate consequence of this is that it requires an enormous amount of memory, data, and compute both for training and inference. This makes it borderline impossible for anything but large corporations and governments to train, control and run.</p>
+<p>The Elisa Neural Computer Agent attempts to solve this issue by using an architecture that consists of 2 parts. A kernel which does the housekeeping, and experts which are small neural or neuro-symbolic entities that can be dynamically loaded and evicted on demand.</p>
+<div class="architecture-feature elisa-frame">
+<h3>You only pay for what you use</h3>
+<p>Regardless of the total amount of experts the system consists of, only the models that are needed at a given time are loaded into memory. This means simple operations require very little resources, while more complex ones needs more.</p>
+<p>The additional benefit is that the entire system need not be trained at once. The modular nature makes training experts in isolation possible on consumer hardware. People all over the world can contribute without the finanical backing of investors.</p>
+</div>
+<h3>What we want Elisa Neural Computer Agent to learn</h3>
+<dl class="principles">
+<div class="elisa-frame">
+<dt>Cognitive world model</dt>
+<dd>Most AI models aspire to create as rich world model as possible in order to be fully grounded in the real world. This means training on gigantic datasets to store as much knowledge as possible. A more sensible approach would be to fully tackle the building blocks of cognition first, which encompasses things like working memory, planning, cause and effect, understanding of time, space, shapes, sound, motion, and distance. If an agent develops a rich abstract world model, it should later be able to adapt much faster to a physical world model. Understanding the physical world to adapt to an abstract world is backwards.</dd>
+</div>
+<div class="elisa-frame">
+<dt>Control a computer in real time</dt>
+<dd>In order to be a truly effective user of a computer the agent needs to be able to work with continuous streams of sensory data like vision and audio with minimal latency and perform split second decision making. It should use adaptive thinking in order to decide when to react quickly and when to plan its next moves.</dd>
+</div>
+<div class="elisa-frame">
+<dt>Learn when to change</dt>
+<dd>A single missed click might be noise. Repeated misses after an interface update might justify learning a new response. The aim is continual learning with <em>self-regulating plasticity</em>, where evidence guides how readily the agent changes a skill it already uses.</dd>
+</div>
+<div class="elisa-frame">
+<dt>Keep knowledge and retrieve it later</dt>
+<dd>Working memory holds recent observations and actions. Long-term memory stores learned experts and the shared representations they use, so a skill can be fetched from disk when a later task needs it. The project is testing how a learner uses recent experience as feedback.</dd>
+</div>
+</dl>
+<h3>How capability should grow</h3>
+<dl class="principles">
+<div class="elisa-frame">
+<dt>Let people train individual experts</dt>
+<dd>Someone with useful examples and a home computer should be able to train one specialist and share it worldwide. Each expert declares its inputs and outputs so the kernel can connect independently developed skills.</dd>
+</div>
+<div class="elisa-frame">
+<dt>Leave room for richer perception</dt>
+<dd>A skill learned from a low-resolution screen should remain useful when a sharper image or audio becomes available. The design should allow new ways to interpret input beyond the resolution and parameter count of any one expert.</dd>
+</div>
+<div class="elisa-frame">
+<dt>Bigger computer, better performance</dt>
+<dd>A faster CPU or GPU should let the agent evaluate more candidate actions within the same response time. More memory should let it work with more experts at once. A model need not be re-trained to take advantage of better hardware.</dd>
+</div>
+<div class="elisa-frame">
+<dt>Run locally on your own hardware</dt>
+<dd>Hardware is getting faster and cheaper, this makes running capable AI system locally with low latency more feasible every year that passes by. But just as important as expanding capability if not more important, is the ability to get more from less. If the state of the art is getting more powerful yet at the same time slower at inference, this is not progress. Real progress should be more capability in LESS time than the last generation.</dd>
+</div>
+<div class="elisa-frame">
+<dt>Design for years of extension</dt>
+<dd>Its plug and play nature means that it can be as relevant five years from now as it is today. Experts can be added, removed or re-trained, and continuous improvements to the kernel will increase its usefulness.</dd>
+</div>
+</dl>
+<div class="architecture-feature elisa-frame">
+<h3>Make skills easy to use, teach and share</h3>
+<p>The goal is a package manager where people can find an expert or package of experts, install it, train it on examples and distribute an update. Each step should be approachable for someone who knows the task well but has never trained a machine-learning model.</p>
+</div>
+<div class="architecture-feature elisa-frame">
+<h3>Permissive Open Source licence</h3>
+<p>The licensing goal is to make Elisa Neural Computer Agent easy to use, study, modify and share.</p>
+</div>
+<div class="architecture-status elisa-frame">
+<h3>Work in progress</h3>
+<p>The kernel already plans routes, loads and evicts experts, and checks new experts against fresh evidence. Learning from screen rewards is under test. Reliable real-time desktop control and the contributor experience described here are project goals.</p>
+<p>But still the project is very much a work in progress, and is currently to be considered an experimental research project. Videos and updates to capabilities will be demonstrated continuously.</p>
+</div>
+</section></main></body></html>

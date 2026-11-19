@@ -1,0 +1,18 @@
+def add(a: i32, b: i32) -> i32:
+    return a + b
+
+export fn add_wasm(a: i32, b: i32) -> i32 = add
+
+def title() -> cstr:
+    return "Elisa Neural Computer Agent"
+
+export fn agent_title() -> cstr = title
+
+def architecture_detail(section: i32) -> cstr:
+    if section == 1:
+        return "Each expert declares what it takes and what it produces. The kernel uses those contracts to plan a route through the library."
+    if section == 2:
+        return "The kernel loads experts when a task needs them and can evict them afterward. Their state lives on disk between uses."
+    return "The system evaluates new experts on fresh evidence before admitting them to the library."
+
+export fn detail(section: i32) -> cstr = architecture_detail

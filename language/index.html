@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Elisa language</title><link rel="stylesheet" href="../assets/surfaces.css"><link rel="stylesheet" href="../style.css"><script type="module" src="../app.js"></script></head>
+<body class="language"><main><nav aria-label="Main navigation">
+  <a class="elisa-liquid" href="../"><svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9"/></svg> Homepage</a>
+  <a class="elisa-liquid elisa-liquid--cobalt" href="https://github.com/torarinvik/Elisa-compiler"><img class="github-mark" src="../assets/github.svg" width="20" height="20" alt=""> GitHub</a>
+</nav><div class="language-grid"><section><h1><img src="../assets/elisa-logo.webp" alt="Elisa language"></h1><p>A compiled programming language with a self-hosted compiler and a WebAssembly target.</p><a class="elisa-liquid" href="https://github.com/torarinvik/Elisa-compiler#readme">Read the docs ↗</a></section>
+<section class="elisa-frame"><header><h2>Playground</h2><span>WebAssembly</span></header><pre><small>add.elisa</small>
+
+<b>def</b> add(a: i32, b: i32) -> i32:
+    <b>return</b> a + b
+
+<b>export fn</b> add_wasm(a: i32, b: i32) -> i32 = add</pre>
+<form><label>a <input type="number" required min="-2147483648" max="2147483647" value="40"></label><label>b <input type="number" required min="-2147483648" max="2147483647" value="2"></label><button class="elisa-liquid">▶ Run</button></form><p>Output <output aria-live="polite">—</output></p></section></div>
+<nav class="cards"><a class="elisa-liquid" href="https://github.com/torarinvik/Elisa-compiler#readme">Compiler ↗</a><a class="elisa-liquid elisa-liquid--violet" href="https://github.com/torarinvik/Elisa-compiler/blob/main/docs/wasm.md">WebAssembly guide ↗</a></nav></main></body></html>
