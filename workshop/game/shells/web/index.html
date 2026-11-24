@@ -24948,8 +24948,20 @@ canvas.addEventListener("pointercancel", () => {
   else if (screen === "task" && isLoadingDockTask()) clearLoadingDockControls(API_EVENT.cancel);
   else if (screen === "task" && isGunslingerTask()) clearGunslingerControls(API_EVENT.cancel);
 });
+function openTaskMenuFromTitle() {
+  setScreen("taskhub");
+  taskCategory = 0;
+  taskSelected = 0;
+  taskApplied = false;
+  draw();
+}
+
 canvas.addEventListener("click", (event) => {
   canvas.focus();
+  if (screen === "title") {
+    openTaskMenuFromTitle();
+    return;
+  }
   if (screen === "taskhub") {
     const hit = taskhubHitFromEvent(event);
     if (!hit) return;
@@ -25130,11 +25142,7 @@ window.addEventListener("keydown", (event) => {
   if (screen === "title") {
     if (event.key === " " || event.key === "Enter") {
       event.preventDefault();
-      setScreen("taskhub");
-      taskCategory = 0;
-      taskSelected = 0;
-      taskApplied = false;
-      draw();
+      openTaskMenuFromTitle();
     }
     return;
   }
