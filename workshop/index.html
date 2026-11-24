@@ -9,18 +9,21 @@
 
   <link rel="stylesheet" href="../assets/surfaces.css">
   <link rel="stylesheet" href="../style.css">
+  <script type="module" src="play.js"></script>
 </head>
 <body class="language workshop">
   <main>
     <nav aria-label="Main navigation">
       <a class="elisa-liquid" href="../">← Homepage</a>
-      <a class="elisa-liquid elisa-liquid--cobalt" href="https://github.com/torarinvik/neural-workshop-enhanced"><img class="github-mark" src="../assets/github.svg" width="20" height="20" alt=""> GitHub</a>
+      <a class="elisa-liquid elisa-liquid--cobalt" href="https://github.com/torarinvik/Neural-Workshop-Enhanced-crossplatform"><img class="github-mark" src="../assets/github.svg" width="20" height="20" alt=""> GitHub</a>
     </nav>
     <section class="workshop-intro">
       <h1>Neural Workshop Enhanced</h1>
       <p>A training ground and proving ground for AI agents.</p>
       <p>The workshop gives agents a range of tasks to practice and be evaluated on. They can solve visual and logical puzzles, operate a simulated desktop and spreadsheet, or navigate mazes. Its agent interface captures what appears on screen and reports task outcomes.</p>
+      <a class="elisa-liquid" id="workshop-play" href="game/shells/web/">Play</a>
     </section>
+    <div class="workshop-player" id="workshop-player" hidden></div>
     <section aria-labelledby="screenshots">
       <h2 id="screenshots">Screenshots</h2>
       <div class="workshop-gallery">
