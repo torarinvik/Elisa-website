@@ -1,5 +1,6 @@
 <!doctype html>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Neural Workshop — web shell</title>
 <link rel="icon" type="image/png" href="../../res/Logo/logo-dark.png">
 <script>
@@ -9,6 +10,7 @@
 </script>
 <style>
   .embedded .shell-toolbar { display: none; }
+  .embedded canvas { border-radius: 0; }
   :root { color-scheme: dark; }
   body {
     margin: 0; min-height: 100vh; display: grid; place-items: center;
@@ -18241,11 +18243,12 @@ function fit() {
   const ratio = window.devicePixelRatio || 1;
   const controls = document.querySelector(".row");
   const main = document.querySelector("main");
+  const embedded = document.documentElement.classList.contains("embedded");
   const controlsHeight = controls?.getBoundingClientRect().height ?? 40;
   fittedControlsHeight = controlsHeight;
   const gap = Number.parseFloat(getComputedStyle(main).rowGap) || 0;
   const availableHeight = Math.max(1,
-    window.innerHeight - controlsHeight - gap - 24);
+    window.innerHeight - controlsHeight - (embedded ? 0 : gap + 24));
   const params = marbleDebugHooks ? new URLSearchParams(location.search) : null;
   const testWidth = Number(params?.get("marble-test-canvas-width"));
   const testHeight = Number(params?.get("marble-test-canvas-height"));
@@ -18253,7 +18256,7 @@ function fit() {
     testWidth <= 4096 && Number.isSafeInteger(testHeight) && testHeight >= 240 &&
     testHeight <= 4096;
   const width = fixedTestSize ? testWidth : Math.max(1, Math.min(
-    window.innerWidth - 32, 912,
+    embedded ? window.innerWidth : Math.min(window.innerWidth - 32, 912),
     availableHeight * REFERENCE_WIDTH / REFERENCE_HEIGHT));
   const height = fixedTestSize ? testHeight :
     width * (REFERENCE_HEIGHT / REFERENCE_WIDTH);

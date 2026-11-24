@@ -1,6 +1,6 @@
 # Browser game
 
-The Play button loads the cross-platform Workshop browser shell in an iframe.
+The Play button opens the cross-platform Workshop browser shell on its own page.
 The deployed snapshot lives in `game/`, with its upstream commit recorded in
 `game/REVISION`.
 

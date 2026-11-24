@@ -127,17 +127,3 @@ output { font-family: monospace }
     text-shadow: none;
   }
 }
-
-.workshop-player {
-  margin: 0 0 3rem;
-  scroll-margin-top: 1rem;
-}
-
-.workshop-player iframe {
-  display: block;
-  width: 100%;
-  height: clamp(28rem, 85vh, 68rem);
-  border: 1px solid #9cb6cd88;
-  border-radius: .8rem;
-  background: #0b1424;
-}
