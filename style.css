@@ -127,3 +127,18 @@ output { font-family: monospace }
     text-shadow: none;
   }
 }
+
+.agent-video {
+  max-width: 56rem;
+  margin-top: 2rem;
+}
+
+.agent-video iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: .8rem;
+  background: #0a172b;
+  margin-bottom: 1rem;
+}
